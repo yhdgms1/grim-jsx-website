@@ -1,0 +1,36 @@
+{
+  "name": "grim-jsx-website",
+  "version": "0.1.0",
+  "description": "Website for the GrimJSX",
+  "main": "index.js",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [
+    "website"
+  ],
+  "author": "Artemis69",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.17.10",
+    "@babel/types": "^7.17.10",
+    "@types/node": "^16.11.33",
+    "vite": "^2.9.8",
+    "vite-plugin-babel": "^1.0.0"
+  },
+  "dependencies": {
+    "@artemis69/im": "^0.2.0",
+    "@babel/standalone": "^7.17.11",
+    "clsx": "^1.1.1",
+    "codejar": "^3.6.0",
+    "dedent": "^0.7.0",
+    "grim-jsx": "0.10.2",
+    "navaid": "^1.2.0",
+    "prism-theme-one-light-dark": "^1.0.4",
+    "prismjs": "^1.28.0"
+  }
+}

@@ -1,0 +1,148 @@
+.section {
+  margin-top: 88px;
+}
+
+.section-header {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-header > h2 {
+  margin: 32px 0 8px 0;
+
+  font-size: 32px;
+  line-height: 40px;
+
+  color: rgb(31, 31, 31);
+
+  font-weight: 500;
+}
+
+.section-header > p {
+  margin-bottom: 40px;
+
+  font-size: 16px;
+  line-height: 24px;
+
+  color: rgb(68, 71, 70);
+}
+
+ul.tile-set {
+  display: grid;
+  grid-gap: 24px;
+  grid-auto-flow: row;
+  grid-template-columns: repeat(1, minmax(0%, 100%));
+  list-style: none;
+  padding-inline-start: 0px;
+}
+
+.tile {
+  display: block;
+  padding: 2px;
+  border-radius: 64px;
+  text-decoration: none;
+}
+
+.tile:focus {
+  border-radius: 28px;
+
+  outline: transparent;
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #000;
+}
+
+.image {
+  background-image: var(--image);
+
+  width: 100%;
+  padding-bottom: 50%;
+  transition: border-radius cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+  border-radius: 64px;
+  background-size: contain;
+}
+
+.tile:hover .image,
+.tile:focus .image {
+  transition: border-radius cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+  border-radius: 24px;
+}
+
+.copy {
+  padding: 16px;
+  color: rgb(31, 31, 31);
+}
+
+.copy > h3 {
+  margin-bottom: 8px;
+
+  line-height: 40px;
+  text-align: left;
+
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.copy > p {
+  font-size: 16px;
+  line-height: 24px;
+  text-align: left;
+  font-weight: 400;
+}
+
+@media (min-width: 960px) {
+  .section-header > h2 {
+    font-size: 64px;
+    line-height: 72px;
+  }
+
+  .section-header > p {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  ul.tile-set {
+    grid-template-columns: repeat(2, minmax(0%, 50%));
+  }
+}
+
+/** Gradient Backgrounds **/
+
+.bg-gta {
+  background-color: #171717;
+  background-image: url("../assets/attrs.svg"),
+    radial-gradient(at 65% 75%, hsla(0, 0%, 10%, 1) 0, transparent 100%),
+    radial-gradient(at 65% 42%, hsla(47, 100%, 50%, 1) 0, transparent 50%),
+    radial-gradient(at 30% 35%, hsla(355, 90%, 60%, 1) 0, transparent 35%),
+    radial-gradient(at 34% 57%, hsla(295, 100%, 50%, 1) 0, transparent 50%),
+    radial-gradient(at 76% 53%, hsla(261, 100%, 50%, 1) 0, transparent 64%);
+}
+
+.bg-sunny {
+  background-image: url("../assets/spread.svg"),
+    radial-gradient(at 94% 89%, hsla(198, 100%, 55%, 1) 0, transparent 45%),
+    radial-gradient(at 14% 12%, hsla(45, 94%, 50%, 1) 0, transparent 64%),
+    radial-gradient(at 38% 36%, hsla(45, 94%, 50%, 1) 0, transparent 55%),
+    radial-gradient(at 38% 80%, hsla(14, 90%, 54%, 1) 0, transparent 59%),
+    radial-gradient(at 73% 37%, hsla(198, 100%, 55%, 1) 0, transparent 70%),
+    radial-gradient(at 5% 87%, hsla(340, 100%, 64%, 1) 0, transparent 75%);
+}
+
+.bg-funny {
+  background-image: url("../assets/config.svg"),
+    radial-gradient(at 0% 0%, #4158d0 0, transparent 50%),
+    radial-gradient(at 60% 20%, #c850c0 0, transparent),
+    radial-gradient(at 50% 90%, #ffcc70 0, #f7ce68 100%);
+}
+
+.bg-repl {
+  background-image: url("../assets/repl.svg"),
+    radial-gradient(at 0% 55%, #432371 0, transparent 70%),
+    radial-gradient(at 21% 0%, #faae7b 0, transparent 90%),
+    radial-gradient(at 100% 90%, #432371 0, #faae7b 50%);
+}
+
+.bg-refs {
+  background-image: url("../assets/ref.svg"),
+    radial-gradient(at 0% 0%, #4a313e 0, transparent 50%),
+    radial-gradient(at 50% 90%, #220b34 0, #c11e38 100%);
+}
