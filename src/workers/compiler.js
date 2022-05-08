@@ -1,5 +1,5 @@
 import { compileJSXPlugin } from "grim-jsx";
-import { transform } from "@babel/standalone";
+import { transformAsync } from "@artemis69/pony-babel-standalone";
 
 self.addEventListener("message", async ({ data }) => {
   const { event } = data;
@@ -13,7 +13,7 @@ self.addEventListener("message", async ({ data }) => {
         });
       } else {
         try {
-          const { code: transformed } = transform(data.code, {
+          const { code: transformed } = await transformAsync(data.code, {
             plugins: [[compileJSXPlugin, { enableCommentOptions: true }]],
             comments: false,
             babelrc: false,
