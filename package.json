@@ -19,6 +19,7 @@
     "@babel/core": "^7.17.10",
     "@babel/types": "^7.17.10",
     "@types/node": "^16.11.33",
+    "terser-config-atomic": "^0.1.1",
     "vite": "^2.9.8",
     "vite-plugin-babel": "^1.0.0"
   },
