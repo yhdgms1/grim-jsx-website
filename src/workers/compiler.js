@@ -29,6 +29,8 @@ self.addEventListener("message", async ({ data }) => {
           });
         } catch (error) {
           if (error instanceof Error) {
+            console.error(error);
+
             self.postMessage({
               event: "ERROR",
               data: error.message,
