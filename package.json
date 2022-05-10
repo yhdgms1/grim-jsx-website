@@ -25,7 +25,7 @@
   },
   "dependencies": {
     "@artemis69/im": "^0.2.0",
-    "@artemis69/pony-babel-standalone": "7.17.11-t.2",
+    "babel-standalone": "npm:@artemis69/pony-babel-standalone@7.17.11-t.3",
     "clsx": "^1.1.1",
     "codejar": "^3.6.0",
     "dedent": "^0.7.0",

@@ -1,5 +1,5 @@
 import { compileJSXPlugin } from "grim-jsx";
-import { transformAsync } from "@artemis69/pony-babel-standalone";
+import { transformAsync } from "babel-standalone";
 
 self.addEventListener("message", async ({ data }) => {
   const { event } = data;
