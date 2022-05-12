@@ -19,7 +19,7 @@
     "@babel/core": "^7.17.10",
     "@babel/types": "^7.17.10",
     "@types/node": "^16.11.33",
-    "vite": "^2.9.8",
+    "vite": "^2.9.9",
     "vite-plugin-babel": "^1.0.0"
   },
   "dependencies": {
@@ -28,7 +28,7 @@
     "clsx": "^1.1.1",
     "codejar": "^3.6.0",
     "dedent": "^0.7.0",
-    "grim-jsx": "0.10.3",
+    "grim-jsx": "0.11.1",
     "navaid": "^1.2.0",
     "prism-theme-one-light-dark": "^1.0.4",
     "prismjs": "^1.28.0"
