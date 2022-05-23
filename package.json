@@ -28,7 +28,7 @@
     "clsx": "^1.1.1",
     "codejar": "^3.6.0",
     "dedent": "^0.7.0",
-    "grim-jsx": "0.15.0",
+    "grim-jsx": "0.15.1",
     "navaid": "^1.2.0",
     "prism-theme-one-light-dark": "^1.0.4",
     "prismjs": "^1.28.0"

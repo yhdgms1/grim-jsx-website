@@ -2,7 +2,7 @@ import { Article, Code } from "../components";
 import { component } from "../lib";
 import dd from "dedent";
 
-const image = `
+const image = `\
 radial-gradient(at 0% 0%, #4a313e 0, transparent 50%),
 radial-gradient(at 50% 90%, #220b34 0, #c11e38 100%)`;
 

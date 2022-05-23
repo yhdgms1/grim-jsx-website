@@ -1,8 +1,6 @@
 import clsx from "clsx";
 import { CodeJar } from "codejar";
 
-import "prism-theme-one-light-dark/prism-onelight.css";
-
 import styles from "./code.module.css";
 
 import worker from "../workers/compiler.js?worker";

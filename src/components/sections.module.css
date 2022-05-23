@@ -146,3 +146,10 @@ ul.tile-set {
     radial-gradient(at 0% 0%, #4a313e 0, transparent 50%),
     radial-gradient(at 50% 90%, #220b34 0, #c11e38 100%);
 }
+
+.bg-installation {
+  background-image: url("../assets/installation.svg"),
+    radial-gradient(at 0 100%, #fa8bff 40%, transparent 75%),
+    radial-gradient(at 40% 70%, #2bd2ff 40%, transparent 100%),
+    radial-gradient(at 100% 100%, #2bff88 10%, transparent 100%);
+}

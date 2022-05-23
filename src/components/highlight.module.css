@@ -1,0 +1,11 @@
+.container {
+  margin: 16px 0;
+  border-radius: 14px;
+
+  border: none !important;
+  white-space: pre !important;
+
+  box-shadow: 0 0 0 1px #e1e3e1;
+
+  height: 100%;
+}

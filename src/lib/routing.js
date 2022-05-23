@@ -17,6 +17,8 @@ const createRouting = () => {
       destroy(d);
 
       ({ d } = component(document.body, cmp));
+
+      scrollTo({ top: 0, behavior: "auto" });
     };
   };
 
