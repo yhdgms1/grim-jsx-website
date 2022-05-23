@@ -15,7 +15,8 @@ import {
   RefsPage,
   ConfigPage,
   ReplPage,
-  installationPage,
+  InstallationPage,
+  SpecialAttributesPage,
 } from "./pages";
 
 fonts();
@@ -32,9 +33,10 @@ import navaid from "navaid";
 navaid()
   .on("/", run(landing))
   .on("/attributes", run(AttributesPage))
+  .on("/special-attributes", run(SpecialAttributesPage))
   .on("/spread", run(SpreadPage))
   .on("/refs", run(RefsPage))
   .on("/repl", run(ReplPage))
   .on("/config", run(ConfigPage))
-  .on("/installation", run(installationPage))
+  .on("/installation", run(InstallationPage))
   .listen();

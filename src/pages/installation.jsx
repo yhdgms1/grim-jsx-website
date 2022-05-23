@@ -1,6 +1,5 @@
 import { Article, Highlight } from "../components";
 import { component } from "../lib";
-import dd from "dedent";
 
 const image = `\
 radial-gradient(at 0 100%, #fa8bff 40%, transparent 75%),
@@ -36,19 +35,18 @@ export default () => {
   });
 
   const { d: d } = component(places[0], Highlight, {
-    code: dd`\
-    import { compileJSXPlugin, defineConfig } from "grim-jsx";
-    import { transformSync } from "@babel/core";
-    
-    const config = defineConfig({
-      // You will see suggestions here
-      enableCommentOptions: true,
-    });
-    
-    const result = transformSync("code", {
-      plugins: [[compileJSXPlugin, config]],
-    });\
-    `,
+    code: `\
+import { compileJSXPlugin, defineConfig } from "grim-jsx";
+import { transformSync } from "@babel/core";
+
+const config = defineConfig({
+  // You will see suggestions here
+  enableCommentOptions: true,
+});
+
+const result = transformSync("code", {
+  plugins: [[compileJSXPlugin, config]],
+});`,
     lang: "js",
   });
 

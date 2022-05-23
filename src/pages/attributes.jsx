@@ -1,6 +1,5 @@
 import { Article, Code } from "../components";
 import { component } from "../lib";
-import dd from "dedent";
 
 const image = `\
 radial-gradient(at 65% 75%, hsla(0, 0%, 10%, 1) 0, transparent 100%),
@@ -40,40 +39,37 @@ export default () => {
   });
 
   const { d: d1 } = component(places[0], Code, {
-    code: dd`
-    import { css } from 'goober';
-    
-    <div id="lemon" class="slogan">
-      You are as yellow as a lemon.
-    </div>;
+    code: `\
+import { css } from 'goober';
+
+<div id="lemon" class="slogan">
+  You are as yellow as a lemon.
+</div>;
 
 
-    <div
-      id="apple"
-      class={css\`
-        color: "red";
-        border-radius: 14px;
-        padding: 16px 28px;
-      \`}
-    >
-      Joe is an apple.
-    </div>;
-
-    `,
+<div
+  id="apple"
+  class={css\`
+    color: "red";
+    border-radius: 14px;
+    padding: 16px 28px;
+  \`}
+>
+  Joe is an apple.
+</div>;`,
     readonly: true,
   });
 
   const { d: d2 } = component(places[1], Code, {
-    code: dd`
-    <div style={{ display: 'flex', 'flex-direction': 'column', 'gap': '1em' }}></div>;
+    code: `\
+<div style={{ display: 'flex', 'flex-direction': 'column', 'gap': '1em' }}></div>;
 
-    const data = () => {
-      return {
-        url: Math.random() > 0.5 ? 'https://imgur.com/a/kWiPgLn' : 'https://i.imgur.com/enAzyml.jpg',
-      }
-    }
-    <div data-image={{ ...data(), mode: 'fit' }}></div>
-    `,
+const data = () => {
+  return {
+    url: Math.random() > 0.5 ? 'https://imgur.com/a/kWiPgLn' : 'https://i.imgur.com/enAzyml.jpg',
+  }
+}
+<div data-image={{ ...data(), mode: 'fit' }}></div>`,
     readonly: true,
   });
 

@@ -1,6 +1,5 @@
 import { Article, Code } from "../components";
 import { component } from "../lib";
-import dd from "dedent";
 
 const image = `\
 radial-gradient(at 0% 0%, #4a313e 0, transparent 50%),
@@ -37,35 +36,33 @@ export default () => {
   });
 
   const { d: d1 } = component(places[0], Code, {
-    code: dd`
-    /** @type {HTMLButtonElement} */
-    let button;
+    code: `\
+/** @type {HTMLButtonElement} */
+let button;
 
-    const widget = (
-      <div>
-        <p>Would you like click the button below?</p>
-        <button ref={button}>Click me!</button>
-      </div>
-    );
+const widget = (
+  <div>
+    <p>Would you like click the button below?</p>
+    <button ref={button}>Click me!</button>
+  </div>
+);
 
-    button.addEventListener('click', () => widget.classList.toggle('active'));
-    `,
+button.addEventListener('click', () => widget.classList.toggle('active'));`,
     readonly: true,
   });
 
   const { d: d2 } = component(places[1], Code, {
-    code: dd`
-    /** @type {HTMLButtonElement} */
-    let button;
+    code: `\
+/** @type {HTMLButtonElement} */
+let button;
 
-    /** @enableStringMode */
-    const widget = (
-      <div>
-        <p>Would you like click the button below?</p>
-        <button ref={button}>Click me!</button>
-      </div>
-    );
-    `,
+/** @enableStringMode */
+const widget = (
+  <div>
+    <p>Would you like click the button below?</p>
+    <button ref={button}>Click me!</button>
+  </div>
+);`,
     readonly: true,
   });
 

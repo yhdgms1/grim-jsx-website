@@ -1,8 +1,7 @@
 import { Article, Code } from "../components";
 import { component } from "../lib";
-import dd from "dedent";
 
-const image = `
+const image = `\
 radial-gradient(at 0% 0%, #4158d0 0, transparent 50%),
 radial-gradient(at 60% 20%, #c850c0 0, transparent),
 radial-gradient(at 50% 90%, #ffcc70 0, #f7ce68 100%)`;
@@ -29,23 +28,22 @@ export default () => {
   });
 
   const { d: d1 } = component(places[0], Code, {
-    code: dd`
-    /** @disableStringMode */
-    const element = <div>Hello! I am a node!</div>;
-    
-    /** @enableStringMode */
-    const string = (
-      <ul>
-        {Array(26)
-          .fill(null)
-          .map((_, i) => {
-            /** @enableStringMode */
-            return <li>{String.fromCharCode(97 + i)}</li>;
-          })
-          .join("")}
-      </ul>
-    );
-    `,
+    code: `\
+/** @disableStringMode */
+const element = <div>Hello! I am a node!</div>;
+
+/** @enableStringMode */
+const string = (
+  <ul>
+    {Array(26)
+      .fill(null)
+      .map((_, i) => {
+        /** @enableStringMode */
+        return <li>{String.fromCharCode(97 + i)}</li>;
+      })
+      .join("")}
+  </ul>
+);`,
     readonly: true,
   });
 

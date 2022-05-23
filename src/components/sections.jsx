@@ -20,6 +20,12 @@ const features = [
     "/refs",
     "bg-refs",
   ],
+  [
+    "Special Attributes",
+    "What are special attributes",
+    "/special-attributes",
+    "bg-sa",
+  ],
   ["Configuration", "Configure it to your liking", "/config", "bg-funny"],
 ];
 

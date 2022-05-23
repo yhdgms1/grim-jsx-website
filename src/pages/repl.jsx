@@ -1,18 +1,17 @@
 import { Code } from "../components";
-import dd from "dedent";
 
 import { header } from "../components/header";
 
 export default () => {
   const { dom, d: playground_destroy } = Code({
     fullscreen: true,
-    code: dd`
-    // Try to edit this file!
-    const el = (
-      <ul>
-        <li>Joe Mama</li>
-      </ul>
-    )`,
+    code: `\
+// Try to edit this file!
+const el = (
+  <ul>
+    <li>Joe Mama</li>
+  </ul>
+)`,
   });
 
   const onMount = () => {

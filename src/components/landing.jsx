@@ -3,19 +3,17 @@ import logo from "../assets/logo.svg?raw";
 
 import { section } from "./sections.jsx";
 
-const space = "&nbsp;";
-
-const description = `A JSX Compiler that aimed at an imperative style of programming.`;
-
 export const landing = (
   <div class={styles.landing}>
     <div class={styles.module}>
       <div>
         <h1 class={styles.title}>
-          Introducing {space} <span translate="no">Grim</span>
+          Introducing <span translate="no">Grim</span>
         </h1>
         <div class={styles.content}>
-          <span>{description}</span>
+          <span>
+            A JSX Compiler that aimed at an imperative style of programming.
+          </span>
         </div>
       </div>
       <div>

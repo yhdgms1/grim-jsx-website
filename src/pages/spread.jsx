@@ -1,6 +1,5 @@
 import { Article, Code } from "../components";
 import { component } from "../lib";
-import dd from "dedent";
 
 const image = `
 radial-gradient(at 94% 89%, hsla(198, 100%, 55%, 1) 0, transparent 45%),
@@ -34,16 +33,16 @@ export default () => {
   });
 
   const { d: d1 } = component(places[0], Code, {
-    code: dd`
-    const Component = (props) => {
-      const { children, ...attrs } = props;
+    code: `\
+const Component = (props) => {
+  const { children, ...attrs } = props;
 
-      return (
-        <div class="holder" {...attrs}>
-          {children}
-        </div>
-      )
-    }`,
+  return (
+    <div class="holder" {...attrs}>
+      {children}
+    </div>
+  )
+}`,
     readonly: true,
   });
 
