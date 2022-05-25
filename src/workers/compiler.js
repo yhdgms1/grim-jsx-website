@@ -13,10 +13,20 @@ self.addEventListener("message", async ({ data }) => {
         });
       } else {
         try {
+          const options = defineConfig({ enableCommentOptions: true });
+
+          const firstLine = data.code.split("\n")[0];
+
+          if (firstLine.includes("#inlineRuntime")) {
+            options.inlineRuntime = true;
+          }
+
+          if (firstLine.includes("#enableStringMode")) {
+            options.enableStringMode = true;
+          }
+
           const { code: transformed } = await transformAsync(data.code, {
-            plugins: [
-              [compileJSXPlugin, defineConfig({ enableCommentOptions: true })],
-            ],
+            plugins: [[compileJSXPlugin, options]],
             comments: false,
             babelrc: false,
             browserslistConfigFile: false,
